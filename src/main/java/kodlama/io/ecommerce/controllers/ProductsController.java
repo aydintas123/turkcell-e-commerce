@@ -1,7 +1,9 @@
 package kodlama.io.ecommerce.controllers;
 
 import kodlama.io.ecommerce.business.abstracts.ProductService;
+import kodlama.io.ecommerce.business.dto.requests.create.CreateProductRequest;
 import kodlama.io.ecommerce.business.dto.requests.update.UpdateProductRequest;
+import kodlama.io.ecommerce.business.dto.responses.create.CreateProductResponse;
 import kodlama.io.ecommerce.business.dto.responses.get.GetAllProductsResponse;
 import kodlama.io.ecommerce.business.dto.responses.get.GetProductResponse;
 import kodlama.io.ecommerce.business.dto.responses.update.UpdateProductResponse;
@@ -30,12 +32,18 @@ public class ProductsController {
     }
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public UpdateProductResponse update(@PathVariable int id, UpdateProductRequest request){
-
-        return service.update(id,request);
-
+    public CreateProductResponse add(@PathVariable int id, CreateProductRequest request){
+        return service.add(request);
     }
-
+    @PutMapping("/{id}")
+    public UpdateProductResponse update(@PathVariable int id,@RequestBody UpdateProductRequest request){
+        return service.update(id,request);
+    }
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable int id){
+        service.delete(id);
+    }
 
     }
 
