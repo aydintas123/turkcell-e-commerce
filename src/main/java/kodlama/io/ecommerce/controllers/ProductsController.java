@@ -7,10 +7,7 @@ import kodlama.io.ecommerce.business.dto.responses.create.CreateProductResponse;
 import kodlama.io.ecommerce.business.dto.responses.get.GetAllProductsResponse;
 import kodlama.io.ecommerce.business.dto.responses.get.GetProductResponse;
 import kodlama.io.ecommerce.business.dto.responses.update.UpdateProductResponse;
-import kodlama.io.ecommerce.entities.Product;
-import kodlama.io.ecommerce.repository.ProductRepository;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,7 +29,7 @@ public class ProductsController {
     }
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public CreateProductResponse add(@PathVariable int id, CreateProductRequest request){
+    public CreateProductResponse add(CreateProductRequest request){
         return service.add(request);
     }
     @PutMapping("/{id}")

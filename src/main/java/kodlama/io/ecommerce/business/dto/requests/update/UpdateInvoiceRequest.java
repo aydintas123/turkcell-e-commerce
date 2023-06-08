@@ -1,4 +1,4 @@
-package kodlama.io.ecommerce.business.dto.requests.create;
+package kodlama.io.ecommerce.business.dto.requests.update;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateInvoiceRequest {
+public class UpdateInvoiceRequest {
     private String description;
     private double totalPrice;
 }

@@ -9,7 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdatSaleResponse {
+public class UpdateSaleResponse {
+
     private String description;
     private double totalPrice;
 

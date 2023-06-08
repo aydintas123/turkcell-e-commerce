@@ -1,4 +1,4 @@
-package kodlama.io.ecommerce.business.dto.responses.create;
+package kodlama.io.ecommerce.business.dto.responses.get;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateInvoiceResponse {
+public class GetAllnvoicesResponse {
     private String description;
     private double totalPrice;
 }

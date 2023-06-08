@@ -16,3 +16,6 @@ public class GetAllProductsResponse {
     private double unitPrice;
     private String description;
 }
+
+
+// abstract , interface , hashmap,treemap , arraylist

@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdatelnvoiceResponse {
+public class UpdateInvoiceResponse {
     private String description;
     private double totalPrice;
 }

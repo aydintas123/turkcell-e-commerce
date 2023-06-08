@@ -16,18 +16,13 @@ import org.hibernate.validator.constraints.Length;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "products")
-public class Product  {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class Product extends BaseClass {
+
     private String name;
-    @NotNull
-    @Min(0)
-    private int quantity;
-    @NotNull
-    @Min(0)
+     private int quantity;
     private double unitPrice;
-    @Length(min=10,max=50)
     private String description;
+
+
 
 }
